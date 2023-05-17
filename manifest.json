@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Blocker",
+  "version": "1.0",
+  "description": "Blocks ads on web pages",
+  "permissions": ["scripting", "webRequestBlocking", "webRequest", "host_permissions"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.js"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
